@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    opacity: 0.8;
+    font-size: 17px;
+}
+
+/* SOBRE A VÉTUS */
+.sobre-vetus {
+    background: white;
+    border-radius: 16px;
+    padding: 35px 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.sobre-vetus h2 {
+    color: #0A2357;
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #D4AF37;
+}
+
+.sobre-vetus p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.diferenca {
+    text-align: center;
+    font-weight: 600;
+    color: #0A2357;
+    margin-top: 15px;
+    padding: 15px;
+    background: #fef9e7;
+    border-radius: 8px;
+}
+
+.titulo-planos {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 35px;
+}
+
+/* GRADE DOS PLANOS — 2 POR LINHA */
+.planos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.plano-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.plano-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+}
+
+.plano-card.destaque {
+    border: 3px solid #D4AF37;
+    transform: scale(1.03);
+}
+
+.plano-card.destaque:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.etiqueta-destaque {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: #D4AF37;
+    color: #2b2b2b;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.plano-card.avulso {
+    border: 2px dashed #0A2357;
+    background: #f8f9fa;
+}
+
+.plano-card h3 {
+    font-size: 22px;
+    color: #0A2357;
+    margin-bottom: 5px;
+}
+
+.subtitulo-plano {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.preco {
+    margin-bottom: 25px;
+}
+
+.valor {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0A2357;
+}
+
+.periodo {
+    font-size: 16px;
+    color: #777;
+}
+
+.beneficios {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.beneficios li {
+    padding: 8px 0;
+    font-size: 15px;
+    color: #444;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.beneficios li.indisponivel {
+    color: #aaa;
+}
+
+.btn-escolher {
+    width: 100%;
+    border: none;
+    background: linear-gradient(135deg, #0A2357 0%, #16213e 100%);
+    color: white;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-escolher:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 20px rgba(10, 35, 87, 0.4);
+}
+
+.destaque .btn-escolher {
+    background: linear-gradient(135deg, #D4AF37 0%, #b8860b 100%);
+    color: #2b2b2b;
+}
+
+/* SABER MAIS — CONTATO */
+.contato-mais {
+    background: white;
+    border-radius: 16px;
+    padding: 30px 25px;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.contato-mais h3 {
+    color: #0A2357;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contato-mais p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-whats-contato {
+    display: inline-block;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-whats-contato:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* RESPONSIVO — CELULAR */
+@media (max-width: 768px) {
+    .planos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .plano-card.destaque {
+        transform: none;
+    }
+
+    .plano-card.destaque:hover {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    .sobre-vetus,
+    .plano-card,
+    .contato-mais {
+        padding: 25px 20px;
+    }
+}
