@@ -8,18 +8,20 @@ const WHATSAPP_VETUS = "5534998242733";
 // MÁSCARAS
 // ------------------------------
 function aplicarMascaraCPF(valor) {
-  valor = valor.replace(/\D/g, "");
-  valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
-  valor = valor.replace(/(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
-  valor = valor.replace(/(\d{3})\.(\d{3})\.(\d{3})(\d{1,2})$/, "$1.$2.$3-$4");
-  return valor;
+  const digitos = valor.replace(/\D/g, "").slice(0, 11);
+  if (digitos.length <= 3) return digitos;
+  if (digitos.length <= 6) return `${digitos.slice(0, 3)}.${digitos.slice(3)}`;
+  if (digitos.length <= 9) {
+    return `${digitos.slice(0, 3)}.${digitos.slice(3, 6)}.${digitos.slice(6)}`;
+  }
+  return `${digitos.slice(0, 3)}.${digitos.slice(3, 6)}.${digitos.slice(6, 9)}-${digitos.slice(9)}`;
 }
 
 function aplicarMascaraWhats(valor) {
-  valor = valor.replace(/\D/g, "");
-  valor = valor.replace(/^(\d{2})(\d)/g, "($1) $2");
-  valor = valor.replace(/(\d{5})(\d{4})/, "$1-$2");
-  return valor;
+  const digitos = valor.replace(/\D/g, "").slice(0, 11);
+  if (digitos.length <= 2) return digitos ? `(${digitos}` : "";
+  if (digitos.length <= 7) return `(${digitos.slice(0, 2)}) ${digitos.slice(2)}`;
+  return `(${digitos.slice(0, 2)}) ${digitos.slice(2, 7)}-${digitos.slice(7)}`;
 }
 
 // ------------------------------
@@ -28,11 +30,19 @@ function aplicarMascaraWhats(valor) {
 function verificarPacote() {
   const valor = document.getElementById("pre-pacote").value;
   const campo = document.getElementById("campo-necessidade");
+  const avisoFichaDigital = document.getElementById("aviso-ficha-digital");
+
+  if (avisoFichaDigital) {
+    avisoFichaDigital.hidden =
+      !valor.startsWith("Pacote Completo") &&
+      !valor.startsWith("Pacote Premium");
+  }
 
   if (valor.startsWith("Serviço Avulso")) {
     campo.classList.remove("oculto");
   } else {
     campo.classList.add("oculto");
+    mostrarErro("pre-necessidade", "pre-necessidade-erro", "");
   }
 }
 
@@ -83,11 +93,14 @@ function validarEmail(email) {
 function mostrarErro(idCampo, idErro, mensagem) {
   const campo = document.getElementById(idCampo);
   const erro = document.getElementById(idErro);
+  if (!erro) return;
   if (mensagem) {
     if (campo) campo.classList.add("invalido");
+    if (campo) campo.setAttribute("aria-invalid", "true");
     erro.textContent = mensagem;
   } else {
     if (campo) campo.classList.remove("invalido");
+    if (campo) campo.removeAttribute("aria-invalid");
     erro.textContent = "";
   }
 }
@@ -191,13 +204,22 @@ document
     }
 
     if (pacoteValor.startsWith("Serviço Avulso") && !necessidade.trim()) {
-      alert("⚠️ Descreva qual serviço avulso deseja!");
+      mostrarErro(
+        "pre-necessidade",
+        "pre-necessidade-erro",
+        "Descreva qual serviço avulso deseja contratar.",
+      );
       valido = false;
+    } else {
+      mostrarErro("pre-necessidade", "pre-necessidade-erro", "");
     }
 
     if (!concordo) {
-      alert("Atenção: Você precisa concordar com os termos!");
+      document.getElementById("pre-concordo-erro").textContent =
+        "Confirme a leitura do termo da proposta e da política de privacidade para continuar.";
       valido = false;
+    } else {
+      document.getElementById("pre-concordo-erro").textContent = "";
     }
 
     if (!valido) return;
@@ -206,7 +228,9 @@ document
     const nomePacote = partes[0];
     const valorPacote =
       "R$ " + parseFloat(partes[1]).toFixed(2).replace(".", ",");
-    const necessidadeTexto = necessidade.trim() || "Não informada";
+    const necessidadeTexto = pacoteValor.startsWith("Serviço Avulso")
+      ? necessidade.trim()
+      : "Não se aplica";
 
     const mensagem =
       "PROPOSTA DE PRESTAÇÃO DE SERVIÇO\n" +
@@ -232,7 +256,7 @@ document
       "NECESSIDADE:\n" +
       necessidadeTexto +
       "\n\n" +
-      "Termo de consentimento aceito - LGPD\n\n" +
+      "Leitura do termo da proposta e da política de privacidade confirmada no formulário.\n\n" +
       "Aguardo retorno!";
 
     const numeroLimpo = WHATSAPP_VETUS.replace(/\D/g, "");
@@ -243,7 +267,7 @@ document
 
     const url =
       "https://wa.me/" + numeroLimpo + "?text=" + encodeURIComponent(mensagem);
-    window.open(url, "_blank");
+    window.open(url, "_blank", "noopener,noreferrer");
   });
 
 // ==================================================
