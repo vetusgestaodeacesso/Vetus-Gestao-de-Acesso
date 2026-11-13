@@ -29,8 +29,10 @@ body {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 200px;
     margin-bottom: 15px;
+    border-radius: 8%;
+    /* filter: invert(1); */
 }
 
 .header h1 {
