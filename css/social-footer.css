@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+.vetus-social-footer {
+  margin-top: 14px;
+  color: inherit;
+  text-align: center;
+}
+
+.vetus-social-footer-standalone {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.vetus-social-heading {
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.vetus-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+}
+
+.vetus-social-links a {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 10px;
+  color: inherit;
+  font-size: 0.8rem;
+  text-align: left;
+  text-decoration: none;
+  transition: background-color 150ms ease, border-color 150ms ease, transform 150ms ease;
+}
+
+.vetus-social-links a:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+}
+
+.vetus-social-links a:focus-visible {
+  outline: 2px solid #70aaff;
+  outline-offset: 3px;
+}
+
+.vetus-social-links svg {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vetus-social-copy {
+  display: grid;
+  gap: 2px;
+  line-height: 1.25;
+}
+
+.vetus-social-copy strong {
+  font-size: 0.78rem;
+}
+
+.vetus-social-copy small {
+  opacity: 0.78;
+  font-size: 0.74rem;
+}
+
+@media (max-width: 520px) {
+  .vetus-social-links a {
+    flex: 1 1 100%;
+    justify-content: center;
+    max-width: 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vetus-social-links a {
+    transition: none;
+  }
+}
+
+html {
+  overflow-x: clip;
+}
+
+.vetus-site-footer {
+  width: 100vw;
+  margin-top: 24px;
+  margin-left: calc(50% - 50vw);
+  background: #17203B;
+  color: #f4f7fc;
+  box-shadow: 0 -12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.vetus-site-footer__inner {
+  width: min(1160px, 100%);
+  margin: 0 auto;
+  padding: 34px 24px 20px;
+}
+
+.vetus-footer-layout {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.8fr) minmax(0, 1.6fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.vetus-footer-brand {
+  margin: 0 0 14px;
+  color: #dbe6fb;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.vetus-footer-contact {
+  position: relative;
+  top: 16px;
+  padding: 11px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.055);
+  text-align: center;
+}
+
+.vetus-footer-contact h2,
+.vetus-footer-social h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.vetus-footer-contact p {
+  margin: 0 0 14px;
+  color: #c4d2ec;
+  font-size: 0.86rem;
+}
+
+.vetus-footer-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 9px;
+  background: #25d366;
+  color: #082a25;
+  font-size: 0.86rem;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.vetus-footer-whatsapp svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vetus-footer-whatsapp:hover {
+  transform: translateY(-1px);
+  background: #42e17a;
+  color: #082a25;
+}
+
+.vetus-footer-social h2 {
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.vetus-site-footer .vetus-social-links {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+
+.vetus-site-footer .vetus-social-links a {
+  width: 100%;
+  max-width: none;
+  flex: none;
+  min-height: 54px;
+  justify-content: flex-start;
+  border-color: rgba(255, 255, 255, 0.17);
+  background: rgba(255, 255, 255, 0.04);
+  color: #e4ebf7;
+}
+
+.vetus-site-footer .vetus-social-links a:hover {
+  border-color: rgba(140, 184, 255, 0.55);
+  background: rgba(87, 139, 216, 0.15);
+  color: #fff;
+}
+
+.vetus-footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.vetus-footer-nav a {
+  color: #cbd6e9;
+  font-size: 0.79rem;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.vetus-footer-nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.vetus-footer-updated {
+  margin: 12px 0 0;
+  color: #9bacc9;
+  font-size: 0.73rem;
+  text-align: center;
+}
+
+.vetus-footer-signature {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+}
+
+.vetus-footer-signature span {
+  color: #d4af37;
+  font-family: 'Sacramento', 'Segoe Script', 'Brush Script MT', cursive;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.vetus-footer-signature small {
+  color: #cbd6e9;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.vetus-site-footer a:focus-visible {
+  outline: 2px solid #9dc4ff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .vetus-site-footer__inner {
+    padding: 28px 16px 18px;
+  }
+
+  .vetus-footer-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .vetus-site-footer .vetus-social-links a {
+    flex-basis: 100%;
+    max-width: 380px;
+  }
+}

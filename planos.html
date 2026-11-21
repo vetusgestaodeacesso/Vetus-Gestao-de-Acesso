@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vétus Gestão de Acesso — Planos</title>
+    <link rel="icon" href="image/logo-vetus.webp" type="image/webp" />
+    <link rel="stylesheet" href="css/vetusofc.css" />
+    <link rel="stylesheet" href="css/social-footer.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img
+          src="image/logo-vetus.webp"
+          alt="Vétus Gestão de Acesso"
+          class="logo"
+        />
+        <h1>Vétus Gestão de Acesso</h1>
+        <p class="subtitulo">Protegendo você no mundo digital</p>
+      </header>
+
+      <h2 class="titulo-planos" id="planos">Escolha o seu plano</h2>
+
+      <!-- PLANOS -->
+      <div class="planos-grid">
+        <!-- Linha superior: Básico, Completo e Premium -->
+        <div class="plano-card" data-plano="Pacote Básico|45.00">
+          <h3>🛡️ Básico</h3>
+          <p class="subtitulo-plano">Organizar o essencial</p>
+          <div class="preco">
+            <span class="valor">R$ 45,00</span>
+            <span class="periodo">/mês</span>
+          </div>
+          <ul class="beneficios">
+            <li>✅ Recuperação de e-mail principal</li>
+            <li>✅ Organização de senhas principais</li>
+            <li>✅ Ficha Digital em PDF protegido</li>
+            <li class="indisponivel">❌ Redes sociais organizadas</li>
+            <li class="indisponivel">❌ Verificação em 2 etapas ativada</li>
+            <li class="indisponivel">❌ E-mails/telefones de recuperação</li>
+            <li class="indisponivel">❌ Orientação para cofre digital</li>
+            <li class="indisponivel">❌ Revisão de segurança completa</li>
+            <li class="indisponivel">❌ 30 dias de suporte prioritário</li>
+          </ul>
+          <button class="btn-escolher">Escolher este plano</button>
+        </div>
+
+        <div class="plano-card destaque" data-plano="Pacote Completo|80.00">
+          <div class="etiqueta-destaque">⭐ Mais Popular</div>
+          <h3>🔐 Completo</h3>
+          <p class="subtitulo-plano">Tudo protegido e tranquilo</p>
+          <div class="preco">
+            <span class="valor">R$ 80,00</span>
+            <span class="periodo">/mês</span>
+          </div>
+          <ul class="beneficios">
+            <li>✅ Recuperação de e-mail principal</li>
+            <li>✅ Organização de senhas principais</li>
+            <li>✅ Ficha Digital em PDF protegido</li>
+            <li>✅ Redes sociais organizadas</li>
+            <li>✅ Verificação em 2 etapas ativada</li>
+            <li>✅ E-mails/telefones de recuperação</li>
+            <li>✅ Orientação para cofre digital</li>
+            <li>✅ Auxílio para criação e configuração da conta <strong>Bitwarden</strong> (cofre seguro para guardar todas as suas senhas)</li>
+            <li class="indisponivel">❌ Revisão de segurança completa</li>
+            <li class="indisponivel">❌ 30 dias de suporte prioritário</li>
+          </ul>
+          <button class="btn-escolher">Escolher este plano</button>
+        </div>
+
+        <!-- Premium completa a linha superior -->
+        <div class="plano-card" data-plano="Pacote Premium|130.00">
+          <h3>👑 Premium</h3>
+          <p class="subtitulo-plano">Segurança total + suporte</p>
+          <div class="preco">
+            <span class="valor">R$ 130,00</span>
+            <span class="periodo">/mês</span>
+          </div>
+          <ul class="beneficios">
+            <li>✅ Recuperação de e-mail principal</li>
+            <li>✅ Organização de senhas principais</li>
+            <li>✅ Ficha Digital em PDF protegido</li>
+            <li>✅ Redes sociais organizadas</li>
+            <li>✅ Verificação em 2 etapas ativada</li>
+            <li>✅ E-mails/telefones de recuperação</li>
+            <li>✅ Orientação para cofre digital</li>
+            <li>✅ Auxílio para criação e configuração da conta <strong>Bitwarden</strong> (cofre seguro para guardar todas as suas senhas)</li>
+            <li>✅ Revisão de segurança completa</li>
+            <li>✅ 30 dias de suporte prioritário</li>
+          </ul>
+          <button class="btn-escolher">Escolher este plano</button>
+        </div>
+
+        <!-- Serviço Avulso ocupa a linha inferior -->
+        <div class="plano-card avulso" data-plano="Serviço Avulso|35.00">
+          <h3>⚙️ Serviço Avulso</h3>
+          <div class="preco">
+            <span class="valor">A partir de R$ 35,00</span>
+          </div>
+          <ul class="beneficios">
+            <li>✅ Consultoria pontual</li>
+            <li>✅ Resolução de problema específico</li>
+            <li>✅ Sem mensalidade</li>
+            <li>✅ Paga uma vez só</li>
+          </ul>
+          <button class="btn-escolher">Solicitar Serviço</button>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="vetus-site-footer">
+      <div class="vetus-site-footer__inner">
+        <div class="vetus-footer-layout">
+          <section class="vetus-footer-contact" aria-labelledby="footer-contact-title">
+            <h2 id="footer-contact-title">Quer saber mais?</h2>
+            <p>Fale conosco no WhatsApp.</p>
+            <a class="vetus-footer-whatsapp" href="https://wa.me/5534998242733" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.6 2.4 2.2 4 4.7 4.8l1.2-1.1 2 .9c.3.1.4.4.3.7-.3.9-1 1.4-2 1.4-3.7-.2-7.2-3.7-7.4-7.4 0-1 .5-1.7 1.4-2 .3-.1.6 0 .7.3l.9 2-1.8.4Z"/></svg>
+              <span>Falar conosco no WhatsApp</span>
+            </a>
+          </section>
+          <section class="vetus-footer-social" aria-labelledby="footer-social-title">
+            <h2 id="footer-social-title">Redes sociais</h2>
+            <nav class="vetus-social-links" aria-label="Redes sociais da Vétus e do criador">
+              <!-- Instagram Vétus: altere o href aqui se o perfil oficial mudar. -->
+              <a href="https://www.instagram.com/vetusacessodigital/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Vétus, @vetusacessodigital"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.5" r="0.8"/></svg><span class="vetus-social-copy"><strong>Instagram Vétus</strong><small>@vetusacessodigital</small></span></a>
+              <!-- Instagram Wender: altere o href aqui se o perfil mudar. -->
+              <a href="https://www.instagram.com/wender_messias2/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Wender, @wender_messias2"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.6" cy="6.5" r="0.8"/></svg><span class="vetus-social-copy"><strong>Instagram Wender</strong><small>@wender_messias2</small></span></a>
+            </nav>
+          </section>
+        </div>
+        <nav class="vetus-footer-nav" aria-label="Links do site"><a href="index.html">Início</a><a href="planos.html">Planos</a><a href="informações/index.html">Informações</a><a href="informações/sobre.html">Sobre</a><a href="informações/contato.html">Contato</a><a href="informações/termos-de-uso.html">Termos de Uso</a><a href="informações/privacidade.html">Política de Privacidade</a><a href="informações/dmca.html">Direitos autorais</a></nav>
+        <div class="vetus-footer-signature" aria-label="Criador da Vétus"><span>Wender Messias</span><small>Criador da Vétus Gestão de Acesso</small></div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".plano-card").forEach((card) => {
+        card.addEventListener("click", function () {
+          const plano = this.getAttribute("data-plano");
+          window.location.href = `pre-servico.html?plano=${encodeURIComponent(plano)}`;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -216,7 +216,7 @@ document
 
     if (!concordo) {
       document.getElementById("pre-concordo-erro").textContent =
-        "Confirme a leitura do termo da proposta e da política de privacidade para continuar.";
+        "Confirme a leitura dos Termos da Proposta e da Política de Privacidade para continuar.";
       valido = false;
     } else {
       document.getElementById("pre-concordo-erro").textContent = "";

@@ -25,7 +25,11 @@ O site não usa um servidor próprio para receber os dados do formulário.
 
 ### Página principal — `index.html`
 
-Apresenta a Vétus e os quatro serviços disponíveis:
+Apresenta a Vétus, explica como funciona o atendimento e direciona o cliente para conhecer os planos.
+
+### Planos — `planos.html`
+
+Apresenta os quatro serviços disponíveis:
 
 - Básico
 - Completo
@@ -40,9 +44,13 @@ O cliente informa nome, CPF, WhatsApp, e-mail e plano. No Serviço Avulso, tamb�
 
 Para os planos Completo e Premium, o termo mostra um aviso específico sobre o uso do e-mail para enviar o link da Ficha Digital Vétus.
 
+### Informações e políticas — `informações/index.html`
+
+Reúne as páginas Sobre, Contato, Termos de Uso, Privacidade e Direitos Autorais. O contato é direcionado ao WhatsApp da Vétus; os textos descrevem o pedido de proposta e o tratamento de dados no atendimento.
+
 ## 🔄 Como funciona
 
-1. O cliente escolhe um dos quatro planos na página principal.
+1. O cliente escolhe um dos quatro planos na página `planos.html`.
 2. O formulário abre com o plano escolhido pré-selecionado.
 3. O cliente preenche os dados solicitados e confirma a leitura dos termos e da política.
 4. Ao tocar em **Enviar Proposta pelo WhatsApp**, o navegador abre uma conversa com a proposta preenchida.
@@ -52,7 +60,8 @@ Ao abrir a conversa, os dados do formulário — inclusive o CPF — são inclu�
 
 ## ✅ Funcionalidades
 
-- Apresentação dos planos em cards responsivos.
+- Apresentação da Vétus na página principal.
+- Apresentação dos planos em cards responsivos na página de planos.
 - Pré-seleção do plano recebido no endereço do formulário.
 - Validação do nome, CPF, WhatsApp e e-mail.
 - Campo condicional para detalhar o Serviço Avulso.
@@ -62,11 +71,16 @@ Ao abrir a conversa, os dados do formulário — inclusive o CPF — são inclu�
 
 ## 📁 Estrutura de pastas
 
-- `index.html` — página principal e apresentação dos planos.
+- `index.html` — página principal e apresentação da Vétus.
+- `planos.html` — planos e serviços disponíveis.
 - `pre-servico.html` — formulário e termos da proposta.
-- `css/vetusofc.css` — estilos da página principal.
+- `informações/` — apresentação, contato e políticas da Vétus.
+- `css/vetusofc.css` — estilos da página de planos.
+- `css/inicio.css` — estilos da página de apresentação.
 - `css/pre-servico.css` — estilos do formulário.
+- `css/social-footer.css` — estilo compartilhado dos links sociais no rodapé.
 - `js/app-pre-servico.js` — validação e envio da proposta.
+- `js/informacoes.js` — prepara a mensagem do formulário de contato para o WhatsApp.
 - `image/logo-vetus.png` — logo compartilhada pelo site.
 
 A **Ficha Digital Vétus** está em um projeto separado e possui seu próprio README.
@@ -75,7 +89,7 @@ A **Ficha Digital Vétus** está em um projeto separado e possui seu próprio RE
 
 1. Baixe ou clone os arquivos do projeto.
 2. Abra `index.html` em um navegador atualizado.
-3. Escolha um plano para abrir o formulário ou abra `pre-servico.html` diretamente.
+3. Acesse `planos.html` para escolher um plano e abrir o formulário, ou abra `pre-servico.html` diretamente.
 4. O WhatsApp só será aberto quando o botão de envio for acionado; revise os dados antes de enviar a mensagem.
 
 Não é necessário instalar dependências para visualizar as páginas. Para publicar, configure o GitHub Pages para servir a pasta raiz do repositório.

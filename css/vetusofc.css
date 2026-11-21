@@ -1,4 +1,4 @@
-* {
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: #17203B;
     min-height: 100vh;
     padding: 30px 20px;
 }
@@ -139,7 +139,6 @@ body {
     grid-template-columns: minmax(190px, 0.9fr) minmax(250px, 1.15fr) minmax(300px, 1.6fr) minmax(170px, 0.85fr);
     align-items: center;
     gap: 18px;
-    padding: 18px 25px;
 }
 
 .plano-card:not(.avulso) .beneficios {
@@ -274,6 +273,39 @@ body {
 .btn-whats-contato:hover {
     transform: scale(1.03);
     box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+}
+
+.site-footer {
+    margin: 36px auto 0;
+    padding: 22px 10px 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.72);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.site-footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+}
+
+.site-footer a {
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 /* Ajuste intermediário para manter o Serviço Avulso compacto */
