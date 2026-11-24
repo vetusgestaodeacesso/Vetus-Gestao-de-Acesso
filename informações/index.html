@@ -8,12 +8,16 @@
     <link rel="icon" href="../image/logo-vetus.webp" type="image/webp" />
     <link rel="stylesheet" href="informacoes.css" />
     <link rel="stylesheet" href="../css/social-footer.css" />
+    <script src="../js/informacoes.js" defer></script>
   </head>
   <body class="pagina-informacoes">
     <div class="info-container">
       <aside class="info-menu">
-        <h3>INFORMAÇÕES</h3>
-        <nav aria-label="Páginas de informação">
+        <div class="info-menu-cabecalho">
+          <h3>INFORMAÇÕES</h3>
+          <button class="info-menu-toggle" type="button" aria-expanded="false" aria-controls="info-menu-nav" aria-label="Abrir menu de informações">☰</button>
+        </div>
+        <nav id="info-menu-nav" aria-label="Páginas de informação">
           <a href="sobre.html" class="menu-item"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg><span>Sobre</span></a>
           <a href="contato.html" class="menu-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>Contato</span></a>
           <a href="termos-de-uso.html" class="menu-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3.5h7l4 4V20a.5.5 0 0 1-.5.5h-10A.5.5 0 0 1 7 20z"/><path d="M14 3.5v4h4M10 12h5m-5 3.5h5"/></svg><span>Termos de Uso</span></a>

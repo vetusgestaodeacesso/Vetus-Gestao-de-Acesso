@@ -201,6 +201,15 @@
     color: var(--inicio-branco);
 }
 
+.pagina-inicio .secao-criador .link-instagram-criador {
+    color: var(--inicio-azul);
+}
+
+.pagina-inicio .secao-criador .link-instagram-criador:hover,
+.pagina-inicio .secao-criador .link-instagram-criador:focus-visible {
+    color: #16213e;
+}
+
 .pagina-inicio .secao-branca p,
 .pagina-inicio .secao-azul p {
     margin: 0 0 14px;
@@ -235,7 +244,16 @@
 .pagina-inicio .passo h3 {
     margin-bottom: 9px;
     color: var(--inicio-azul);
-    font-size: 18px;
+    font-size: 19px;
+}
+
+.pagina-inicio .aviso-ficha-propria {
+    margin: -8px 0 24px;
+    color: var(--inicio-dourado);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .pagina-inicio .passo p {
@@ -326,6 +344,10 @@
 }
 
 @media (max-width: 700px) {
+    .pagina-inicio .passo h3 {
+        font-size: 20px;
+    }
+
     .pagina-inicio .passos {
         grid-template-columns: 1fr;
     }
